@@ -18,7 +18,7 @@ export const getCartItems = createAsyncThunk(
       //   console.log(thunkAPI.getState());
       //   thunkAPI.dispatch(openModal());
       const response = await axios(url);
-      return response.data.results;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue("Something went wrong");
     }
